@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 - 임시대안학교</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 네비게이션 바 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h2>임시대안학교</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">홈</a></li>
+                <li><a href="history.html" class="nav-link">학교 연혁</a></li>
+                <li><a href="curriculum.html" class="nav-link">학습계획</a></li>
+                <li><a href="login.html" class="nav-link login-btn active">로그인</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 로그인 섹션 -->
+    <section class="login-section">
+        <div class="login-container">
+            <div class="login-left">
+                <div class="login-animation">
+                    <div class="circle circle-1"></div>
+                    <div class="circle circle-2"></div>
+                    <div class="circle circle-3"></div>
+                    <div class="login-illustration">
+                        <h2>환영합니다!</h2>
+                        <p>임시대안학교 포털에 로그인하여 다양한 서비스를 이용하세요</p>
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <span class="check-icon">✓</span>
+                                <span>학습 자료 열람</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="check-icon">✓</span>
+                                <span>성적 확인</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="check-icon">✓</span>
+                                <span>과제 제출</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="check-icon">✓</span>
+                                <span>선생님과 소통</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="login-right">
+                <div class="login-card">
+                    <h2 class="login-title">로그인</h2>
+                    <p class="login-subtitle">계정에 로그인하세요</p>
+
+                    <form id="loginForm" class="login-form">
+                        <div class="form-group">
+                            <label for="userType" class="form-label">사용자 유형</label>
+                            <div class="user-type-selector">
+                                <input type="radio" id="student" name="userType" value="student" checked>
+                                <label for="student" class="user-type-btn">
+                                    <span class="icon">🎓</span>
+                                    <span>학생</span>
+                                </label>
+
+                                <input type="radio" id="teacher" name="userType" value="teacher">
+                                <label for="teacher" class="user-type-btn">
+                                    <span class="icon">👨‍🏫</span>
+                                    <span>교사</span>
+                                </label>
+
+                                <input type="radio" id="parent" name="userType" value="parent">
+                                <label for="parent" class="user-type-btn">
+                                    <span class="icon">👪</span>
+                                    <span>학부모</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="userId" class="form-label">아이디</label>
+                            <div class="input-wrapper">
+                                <span class="input-icon">👤</span>
+                                <input
+                                    type="text"
+                                    id="userId"
+                                    class="form-input"
+                                    placeholder="아이디를 입력하세요"
+                                    required
+                                >
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password" class="form-label">비밀번호</label>
+                            <div class="input-wrapper">
+                                <span class="input-icon">🔒</span>
+                                <input
+                                    type="password"
+                                    id="password"
+                                    class="form-input"
+                                    placeholder="비밀번호를 입력하세요"
+                                    required
+                                >
+                                <button type="button" class="toggle-password" id="togglePassword">
+                                    <span class="eye-icon">👁️</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-options">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="rememberMe">
+                                <span class="checkmark"></span>
+                                <span class="checkbox-label">로그인 상태 유지</span>
+                            </label>
+                            <a href="#" class="forgot-password">비밀번호 찾기</a>
+                        </div>
+
+                        <button type="submit" class="btn-login">
+                            <span class="btn-text">로그인</span>
+                            <span class="btn-loader"></span>
+                        </button>
+
+                        <div class="divider">
+                            <span>또는</span>
+                        </div>
+
+                        <div class="social-login">
+                            <button type="button" class="social-btn google">
+                                <span class="social-icon">G</span>
+                                Google로 로그인
+                            </button>
+                            <button type="button" class="social-btn naver">
+                                <span class="social-icon">N</span>
+                                네이버로 로그인
+                            </button>
+                        </div>
+
+                        <div class="signup-link">
+                            계정이 없으신가요? <a href="#">회원가입</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 알림 모달 -->
+    <div id="notification" class="notification">
+        <div class="notification-content">
+            <span class="notification-icon">✓</span>
+            <span class="notification-message"></span>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
