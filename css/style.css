@@ -3,9 +3,9 @@
 /* ==================== */
 
 :root {
-    --primary-color: #6366f1;
-    --secondary-color: #8b5cf6;
-    --accent-color: #ec4899;
+    --primary-color: #1e40af;
+    --secondary-color: #10b981;
+    --accent-color: #f59e0b;
     --text-dark: #1f2937;
     --text-light: #6b7280;
     --bg-light: #f9fafb;
@@ -147,7 +147,7 @@ body {
     display: flex;
     align-items: center;
     padding-top: 80px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #1e40af 0%, #10b981 100%);
     position: relative;
     overflow: hidden;
 }
@@ -164,15 +164,16 @@ body {
 }
 
 .hero .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
+    width: 100%;
+    max-width: 1200px;
 }
 
 .hero-content {
     color: var(--white);
     z-index: 1;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .hero-title {
@@ -229,6 +230,7 @@ body {
     gap: 1rem;
     opacity: 0;
     animation: fadeIn 0.8s ease 1s forwards;
+    justify-content: center;
 }
 
 .btn {
@@ -261,60 +263,7 @@ body {
     color: var(--primary-color);
 }
 
-.hero-image {
-    position: relative;
-    height: 400px;
-}
-
-.floating-card {
-    position: absolute;
-    background: var(--white);
-    padding: 1.5rem;
-    border-radius: 15px;
-    box-shadow: var(--shadow-xl);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    animation: float 3s ease-in-out infinite;
-}
-
-.floating-card .card-icon {
-    font-size: 2rem;
-}
-
-.floating-card p {
-    color: var(--text-dark);
-    font-weight: 600;
-    white-space: nowrap;
-}
-
-.card-1 {
-    top: 50px;
-    left: 50px;
-    animation-delay: 0s;
-}
-
-.card-2 {
-    top: 150px;
-    right: 80px;
-    animation-delay: 1s;
-}
-
-.card-3 {
-    bottom: 100px;
-    left: 100px;
-    animation-delay: 2s;
-}
-
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-}
+/* Hero image removed - clean design */
 
 /* ==================== */
 /* 특징 섹션 */
@@ -512,7 +461,7 @@ body {
     padding-top: 80px;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #1e40af 0%, #10b981 100%);
 }
 
 .login-container {
@@ -1516,11 +1465,7 @@ body {
     }
 
     .hero .container {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-image {
-        display: none;
+        width: 100%;
     }
 
     .hero-title {
