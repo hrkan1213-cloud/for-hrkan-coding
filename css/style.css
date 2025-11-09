@@ -3,9 +3,9 @@
 /* ==================== */
 
 :root {
-    --primary-color: #1e40af;
-    --secondary-color: #10b981;
-    --accent-color: #f59e0b;
+    --primary-color: #0f172a;
+    --secondary-color: #c9a961;
+    --accent-color: #d4af37;
     --text-dark: #1f2937;
     --text-light: #6b7280;
     --bg-light: #f9fafb;
@@ -147,7 +147,7 @@ body {
     display: flex;
     align-items: center;
     padding-top: 80px;
-    background: linear-gradient(135deg, #1e40af 0%, #10b981 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
     position: relative;
     overflow: hidden;
 }
@@ -341,7 +341,28 @@ body {
 
 .stats {
     padding: 4rem 0;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    position: relative;
+}
+
+.stats::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--secondary-color), transparent);
+}
+
+.stats::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--secondary-color), transparent);
 }
 
 .stats-grid {
@@ -461,7 +482,7 @@ body {
     padding-top: 80px;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, #1e40af 0%, #10b981 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
 }
 
 .login-container {
@@ -650,13 +671,15 @@ body {
 }
 
 .user-type-selector input[type="radio"]:checked + .user-type-btn {
-    border-color: var(--primary-color);
-    background: #eef2ff;
+    border-color: var(--secondary-color);
+    background: linear-gradient(to bottom, #fffbf0, #fef9e7);
+    box-shadow: 0 0 0 2px rgba(201, 169, 97, 0.1);
 }
 
 .user-type-btn:hover {
-    border-color: var(--primary-color);
+    border-color: var(--secondary-color);
     transform: translateY(-2px);
+    background: #fffbf0;
 }
 
 .input-wrapper {
@@ -682,8 +705,8 @@ body {
 
 .form-input:focus {
     outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(201, 169, 97, 0.15);
 }
 
 .toggle-password {
@@ -721,8 +744,8 @@ body {
 }
 
 .checkbox-container input[type="checkbox"]:checked + .checkmark {
-    background: var(--primary-color);
-    border-color: var(--primary-color);
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
 }
 
 .checkbox-container input[type="checkbox"]:checked + .checkmark::after {
@@ -735,7 +758,7 @@ body {
 }
 
 .forgot-password {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     text-decoration: none;
     font-size: 0.875rem;
 }
@@ -821,7 +844,7 @@ body {
 }
 
 .social-btn:hover {
-    border-color: var(--primary-color);
+    border-color: var(--secondary-color);
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }
@@ -852,7 +875,7 @@ body {
 }
 
 .signup-link a {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     text-decoration: none;
     font-weight: 600;
 }
@@ -902,9 +925,20 @@ body {
 
 .page-header {
     padding: 8rem 0 4rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
     color: var(--white);
     text-align: center;
+    position: relative;
+}
+
+.page-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--secondary-color), transparent);
 }
 
 .page-title {
@@ -965,7 +999,7 @@ body {
 .intro-stat span {
     font-size: 2rem;
     font-weight: 800;
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .intro-image {
@@ -1008,7 +1042,7 @@ body {
     top: 0;
     bottom: 0;
     width: 4px;
-    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color), var(--accent-color));
 }
 
 .timeline-item {
@@ -1045,14 +1079,15 @@ body {
     width: 30px;
     height: 30px;
     background: var(--white);
-    border: 4px solid var(--primary-color);
+    border: 4px solid var(--secondary-color);
     border-radius: 50%;
     transition: all 0.3s ease;
 }
 
 .timeline-item:hover .timeline-dot {
     transform: scale(1.3);
-    box-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+    box-shadow: 0 0 20px rgba(201, 169, 97, 0.6);
+    border-color: var(--accent-color);
 }
 
 .timeline-content {
@@ -1076,6 +1111,7 @@ body {
     border-radius: 20px;
     font-weight: 700;
     margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(201, 169, 97, 0.2);
 }
 
 .timeline-content h3 {
@@ -1106,7 +1142,7 @@ body {
     content: '✓';
     position: absolute;
     left: 0;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     font-weight: bold;
 }
 
@@ -1223,8 +1259,8 @@ body {
 }
 
 .filter-tab:hover {
-    border-color: var(--primary-color);
-    color: var(--primary-color);
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
 }
 
 .filter-tab.active {
@@ -1310,7 +1346,7 @@ body {
 .toggle-icon {
     font-size: 1.5rem;
     font-weight: bold;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     transition: transform 0.3s ease;
 }
 
@@ -1378,12 +1414,12 @@ body {
     padding: 1rem;
     background: var(--bg-light);
     border-radius: 10px;
-    border-left: 4px solid var(--primary-color);
+    border-left: 4px solid var(--secondary-color);
 }
 
 .timeline-mini-item strong {
     display: block;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 0.5rem;
 }
 
